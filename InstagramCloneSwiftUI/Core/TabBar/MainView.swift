@@ -23,7 +23,7 @@ struct MainView: View {
                 Text("Liked")
             }
             Tab("", systemImage: "person") {
-                Text("Profile")
+                ProfileView()
             }
         }
         .tint(.primary)

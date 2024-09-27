@@ -17,6 +17,8 @@
 				App/InstagramCloneSwiftUIApp.swift,
 				Assets.xcassets,
 				ContentView.swift,
+				Core/Components/UserStatsView.swift,
+				Core/Profile/ProfileView.swift,
 				Core/TabBar/MainView.swift,
 				"Preview Content/Preview Assets.xcassets",
 			);
