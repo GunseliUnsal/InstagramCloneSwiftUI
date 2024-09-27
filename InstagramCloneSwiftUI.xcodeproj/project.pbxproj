@@ -17,6 +17,7 @@
 				App/InstagramCloneSwiftUIApp.swift,
 				Assets.xcassets,
 				ContentView.swift,
+				Core/TabBar/MainView.swift,
 				"Preview Content/Preview Assets.xcassets",
 			);
 			target = 87148EFF2CA709E40061FCA1 /* InstagramCloneSwiftUI */;
