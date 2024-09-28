@@ -91,7 +91,7 @@ struct ProfileView: View {
                     Button {
                         
                     } label: {
-                        Image(systemName: "gear")
+                        Image(systemName: "line.3.horizontal")
                             .foregroundStyle(.black)
                     }
                     

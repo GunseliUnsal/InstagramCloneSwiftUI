@@ -21,6 +21,7 @@
 				Core/Feed/FeedCell.swift,
 				Core/Feed/FeedView.swift,
 				Core/Profile/ProfileView.swift,
+				Core/Search/SearchView.swift,
 				Core/TabBar/MainView.swift,
 				"Preview Content/Preview Assets.xcassets",
 			);
