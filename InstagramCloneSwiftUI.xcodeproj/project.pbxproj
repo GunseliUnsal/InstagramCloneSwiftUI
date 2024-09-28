@@ -17,6 +17,7 @@
 				App/InstagramCloneSwiftUIApp.swift,
 				Assets.xcassets,
 				ContentView.swift,
+				Core/Authentication/LoginView.swift,
 				Core/Components/UserStatsView.swift,
 				Core/Feed/FeedCell.swift,
 				Core/Feed/FeedView.swift,

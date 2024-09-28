@@ -14,7 +14,7 @@ struct MainView: View {
                 FeedView()
             }
             Tab("", systemImage: "magnifyingglass") {
-                Text("Search")
+                SearchView()
             }
             Tab("", systemImage: "plus.square") {
                 Text("Upload")
