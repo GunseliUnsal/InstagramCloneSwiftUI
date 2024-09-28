@@ -11,7 +11,7 @@ struct MainView: View {
     var body: some View {
         TabView {
             Tab("", systemImage: "house") {
-                Text("Feed")
+                FeedView()
             }
             Tab("", systemImage: "magnifyingglass") {
                 Text("Search")

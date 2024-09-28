@@ -18,6 +18,8 @@
 				Assets.xcassets,
 				ContentView.swift,
 				Core/Components/UserStatsView.swift,
+				Core/Feed/FeedCell.swift,
+				Core/Feed/FeedView.swift,
 				Core/Profile/ProfileView.swift,
 				Core/TabBar/MainView.swift,
 				"Preview Content/Preview Assets.xcassets",
