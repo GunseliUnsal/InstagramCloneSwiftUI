@@ -23,18 +23,10 @@ struct LoginView: View {
                 //text fields
                 TextField("Enter your email", text: $email)
                     .textInputAutocapitalization(.never)
-                    .font(.subheadline)
-                    .padding(12)
-                    .background(Color(.systemGray6))
-                    .clipShape(.rect(cornerRadius: 10))
-                    .padding(.horizontal, 24)
+                    .modifier(IGTextFieldModifier())
                 
                 SecureField("Enter your password", text: $password)
-                    .font(.subheadline)
-                    .padding(12)
-                    .background(Color(.systemGray6))
-                    .clipShape(.rect(cornerRadius: 10))
-                    .padding(.horizontal, 24)
+                    .modifier(IGTextFieldModifier())
                 
                 //forgot password
                 Button{
@@ -49,9 +41,10 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
                 //login button
-                Button{
-                    print("Login")
-                }label:{
+                NavigationLink {
+//                    AddEmailView()
+//                        .navigationBarBackButtonHidden(true)
+                } label: {
                     Text("Login")
                         .font(.subheadline)
                         .fontWeight(.semibold)
@@ -93,7 +86,8 @@ struct LoginView: View {
                 Divider()
                 
                 NavigationLink{
-                    Text("Sign up")
+                    AddEmailView()
+                        .navigationBarBackButtonHidden(true)
                 }label: {
                     HStack(spacing: 3){
                         Text("Don't have an account?")
