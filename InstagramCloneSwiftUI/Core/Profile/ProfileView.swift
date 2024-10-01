@@ -8,92 +8,35 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let user: User
+    
     private let gridItems: [GridItem] = [
         .init(.flexible() ,spacing: 1),
         .init(.flexible() ,spacing: 1),
         .init(.flexible() ,spacing: 1)
     ]
     
-    let user: User
+    private let imageDimension: CGFloat = (UIScreen.main.bounds.width / 3) - 1
+    
+    var posts: [Post] {
+        return Post.MOCK_POSTS.filter({ $0.user?.username == user.username })
+    }
     
     var body: some View {
-            ScrollView {
-                VStack{
-                    //header
-                    VStack(spacing: 10){
-                        
-                        //pic and stats
-                        HStack{
-                            Image(user.profileImageUrl ?? "")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 80, height: 80)
-                                .clipShape(Circle())
-                            
-                            Spacer()
-                            
-                            HStack{
-                                UserStatsView(value: 3, title: "Posts")
-                                UserStatsView(value: 9, title: "Followers")
-                                UserStatsView(value: 23, title: "Following")
-                                
-                                
-                                
-                            }
-                            
-                            
-                        }
-                        .padding(.horizontal)
-                        
-                        //name and bio
-                        VStack(alignment: .leading, spacing: 4){
-                            if let fullName = user.fullName{
-                                Text(fullName)
-                                    .font(.footnote)
-                                    .fontWeight(.semibold)
-                            }
-                            
-                            if let bio = user.bio {
-                                Text(bio)
-                                    .font(.footnote)
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal)
-                        
-                        //action button
-                        Button {
-                            
-                        } label: {
-                            Text("Edit Profile")
-                                .foregroundStyle(.black)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .frame(width: 360, height: 32)
-                                .overlay(RoundedRectangle(cornerRadius: 6)
-                                    .stroke(Color.gray, lineWidth: 1))
-                            
-                        }
-                        
-                        Divider()
-                    }
-                    
-                    //post grid view
-                    VStack {
-                        LazyVGrid(columns: gridItems, spacing: 1) {
-                            ForEach(0...15, id: \.self) {_ in
-                                Image(user.profileImageUrl ?? "")
-                                    .resizable()
-                                    .scaledToFill()
-                            }
-                        }
-                    }
-                }
+        ScrollView {
+            VStack{
+                //header
+                ProfileHeaderView(user: user)
+                          //post grid view
+                PostGridView(posts: posts)
             }
-            .navigationTitle("Profile")
-            .navigationBarTitleDisplayMode(.inline)
+        }
+        .navigationTitle("Profile")
+        .navigationBarTitleDisplayMode(.inline)
     }
+
 }
+
 
 #Preview {
     ProfileView(user: User.MOCK_USERS[0])

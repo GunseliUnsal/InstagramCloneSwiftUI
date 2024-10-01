@@ -23,7 +23,7 @@ struct MainTabView: View {
                 Text("Liked")
             }
             Tab("", systemImage: "person") {
-                CurrentUserProfileView()
+                CurrentUserProfileView(user: User.MOCK_USERS[1])
             }
         }
         .tint(.primary)
