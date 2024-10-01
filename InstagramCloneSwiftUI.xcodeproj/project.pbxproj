@@ -29,6 +29,7 @@
 				Core/Profile/ProfileView.swift,
 				Core/Search/SearchView.swift,
 				Core/TabBar/MainView.swift,
+				Model/User.swift,
 				"Preview Content/Preview Assets.xcassets",
 			);
 			target = 87148EFF2CA709E40061FCA1 /* InstagramCloneSwiftUI */;
