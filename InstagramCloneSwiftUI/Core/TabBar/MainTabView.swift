@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct MainTabView: View {
     var body: some View {
         TabView {
             Tab("", systemImage: "house") {
@@ -23,7 +23,7 @@ struct MainView: View {
                 Text("Liked")
             }
             Tab("", systemImage: "person") {
-                ProfileView()
+                CurrentUserProfileView()
             }
         }
         .tint(.primary)
@@ -32,5 +32,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    MainTabView()
 }

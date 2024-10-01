@@ -26,9 +26,10 @@
 				Core/Components/UserStatsView.swift,
 				Core/Feed/FeedCell.swift,
 				Core/Feed/FeedView.swift,
+				Core/Profile/CurrentUserProfileView.swift,
 				Core/Profile/ProfileView.swift,
 				Core/Search/SearchView.swift,
-				Core/TabBar/MainView.swift,
+				Core/TabBar/MainTabView.swift,
 				Model/User.swift,
 				"Preview Content/Preview Assets.xcassets",
 			);

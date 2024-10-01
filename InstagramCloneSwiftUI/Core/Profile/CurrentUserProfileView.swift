@@ -1,22 +1,20 @@
 //
-//  ProfileView.swift
+//  CurrentUserProfileView.swift
 //  InstagramCloneSwiftUI
 //
-//  Created by Günseli Ünsal on 27.09.2024.
+//  Created by Günseli Ünsal on 1.10.2024.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
+struct CurrentUserProfileView: View {
     private let gridItems: [GridItem] = [
         .init(.flexible() ,spacing: 1),
         .init(.flexible() ,spacing: 1),
         .init(.flexible() ,spacing: 1)
     ]
-    
-    let user: User
-    
     var body: some View {
+        NavigationStack{
             ScrollView {
                 VStack{
                     //header
@@ -24,7 +22,7 @@ struct ProfileView: View {
                         
                         //pic and stats
                         HStack{
-                            Image(user.profileImageUrl ?? "")
+                            Image("naruto3")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 80, height: 80)
@@ -47,16 +45,12 @@ struct ProfileView: View {
                         
                         //name and bio
                         VStack(alignment: .leading, spacing: 4){
-                            if let fullName = user.fullName{
-                                Text(fullName)
-                                    .font(.footnote)
-                                    .fontWeight(.semibold)
-                            }
+                            Text("Naruto Uzumaki")
+                                .font(.footnote)
+                                .fontWeight(.semibold)
                             
-                            if let bio = user.bio {
-                                Text(bio)
-                                    .font(.footnote)
-                            }
+                            Text("Ramen Forever")
+                                .font(.footnote)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
@@ -82,7 +76,7 @@ struct ProfileView: View {
                     VStack {
                         LazyVGrid(columns: gridItems, spacing: 1) {
                             ForEach(0...15, id: \.self) {_ in
-                                Image(user.profileImageUrl ?? "")
+                                Image("naruto")
                                     .resizable()
                                     .scaledToFill()
                             }
@@ -92,9 +86,21 @@ struct ProfileView: View {
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .foregroundStyle(.black)
+                    }
+                    
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ProfileView(user: User.MOCK_USERS[0])
+    CurrentUserProfileView()
 }
