@@ -32,6 +32,8 @@
 				Core/Profile/ProfileView.swift,
 				Core/Search/SearchView.swift,
 				Core/TabBar/MainTabView.swift,
+				Core/UploadPost/UploadPostView.swift,
+				Core/UploadPost/UploadPostViewModel.swift,
 				Model/Post.swift,
 				Model/User.swift,
 				"Preview Content/Preview Assets.xcassets",
