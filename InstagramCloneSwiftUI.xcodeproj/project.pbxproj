@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		87765F052CB04C2600A33F4F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 87765F042CB04C2600A33F4F /* FirebaseAuth */; };
+		87765F072CB04C2600A33F4F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 87765F062CB04C2600A33F4F /* FirebaseFirestore */; };
+		87765F092CB04C2600A33F4F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 87765F082CB04C2600A33F4F /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		87148F002CA709E40061FCA1 /* InstagramCloneSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCloneSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -16,12 +22,13 @@
 			membershipExceptions = (
 				App/InstagramCloneSwiftUIApp.swift,
 				Assets.xcassets,
-				ContentView.swift,
-				Core/Authentication/AddEmailView.swift,
-				Core/Authentication/CompleteSignUpView.swift,
-				Core/Authentication/CreatePasswordView.swift,
-				Core/Authentication/CreateUsernameView.swift,
-				Core/Authentication/LoginView.swift,
+				"Core/Authentication/GoogleService-Info.plist",
+				Core/Authentication/Service/AuthService.swift,
+				Core/Authentication/View/AddEmailView.swift,
+				Core/Authentication/View/CompleteSignUpView.swift,
+				Core/Authentication/View/CreatePasswordView.swift,
+				Core/Authentication/View/CreateUsernameView.swift,
+				Core/Authentication/View/LoginView.swift,
 				Core/Components/IGTextFieldModifier.swift,
 				Core/Components/PostGridView.swift,
 				Core/Components/UserStatsView.swift,
@@ -30,6 +37,8 @@
 				Core/Profile/CurrentUserProfileView.swift,
 				Core/Profile/ProfileHeaderView.swift,
 				Core/Profile/ProfileView.swift,
+				Core/Root/View/ContentView.swift,
+				Core/Root/ViewModel/ContentViewModel.swift,
 				Core/Search/SearchView.swift,
 				Core/TabBar/MainTabView.swift,
 				Core/UploadPost/UploadPostView.swift,
@@ -58,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87765F052CB04C2600A33F4F /* FirebaseAuth in Frameworks */,
+				87765F072CB04C2600A33F4F /* FirebaseFirestore in Frameworks */,
+				87765F092CB04C2600A33F4F /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +109,9 @@
 			);
 			name = InstagramCloneSwiftUI;
 			packageProductDependencies = (
+				87765F042CB04C2600A33F4F /* FirebaseAuth */,
+				87765F062CB04C2600A33F4F /* FirebaseFirestore */,
+				87765F082CB04C2600A33F4F /* FirebaseStorage */,
 			);
 			productName = InstagramCloneSwiftUI;
 			productReference = 87148F002CA709E40061FCA1 /* InstagramCloneSwiftUI.app */;
@@ -126,6 +141,9 @@
 			);
 			mainGroup = 87148EF72CA709E40061FCA1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				87765F032CB04C2600A33F4F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 87148F012CA709E40061FCA1 /* Products */;
 			projectDirPath = "";
@@ -354,6 +372,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		87765F032CB04C2600A33F4F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87765F042CB04C2600A33F4F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87765F032CB04C2600A33F4F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		87765F062CB04C2600A33F4F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87765F032CB04C2600A33F4F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		87765F082CB04C2600A33F4F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87765F032CB04C2600A33F4F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87148EF82CA709E40061FCA1 /* Project object */;
 }
