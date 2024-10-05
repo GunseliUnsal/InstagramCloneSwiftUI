@@ -16,47 +16,9 @@
 		87148F002CA709E40061FCA1 /* InstagramCloneSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCloneSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		87148F442CA70C230061FCA1 /* Exceptions for "InstagramCloneSwiftUI" folder in "InstagramCloneSwiftUI" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				App/InstagramCloneSwiftUIApp.swift,
-				Assets.xcassets,
-				"Core/Authentication/GoogleService-Info.plist",
-				Core/Authentication/Service/AuthService.swift,
-				Core/Authentication/View/AddEmailView.swift,
-				Core/Authentication/View/CompleteSignUpView.swift,
-				Core/Authentication/View/CreatePasswordView.swift,
-				Core/Authentication/View/CreateUsernameView.swift,
-				Core/Authentication/View/LoginView.swift,
-				Core/Components/IGTextFieldModifier.swift,
-				Core/Components/PostGridView.swift,
-				Core/Components/UserStatsView.swift,
-				Core/Feed/FeedCell.swift,
-				Core/Feed/FeedView.swift,
-				Core/Profile/CurrentUserProfileView.swift,
-				Core/Profile/ProfileHeaderView.swift,
-				Core/Profile/ProfileView.swift,
-				Core/Root/View/ContentView.swift,
-				Core/Root/ViewModel/ContentViewModel.swift,
-				Core/Search/SearchView.swift,
-				Core/TabBar/MainTabView.swift,
-				Core/UploadPost/UploadPostView.swift,
-				Core/UploadPost/UploadPostViewModel.swift,
-				Model/Post.swift,
-				Model/User.swift,
-				"Preview Content/Preview Assets.xcassets",
-			);
-			target = 87148EFF2CA709E40061FCA1 /* InstagramCloneSwiftUI */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		87148F3F2CA70C230061FCA1 /* InstagramCloneSwiftUI */ = {
+		87BCD90A2CB17780001ED05F /* InstagramCloneSwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				87148F442CA70C230061FCA1 /* Exceptions for "InstagramCloneSwiftUI" folder in "InstagramCloneSwiftUI" target */,
-			);
 			path = InstagramCloneSwiftUI;
 			sourceTree = "<group>";
 		};
@@ -79,7 +41,7 @@
 		87148EF72CA709E40061FCA1 = {
 			isa = PBXGroup;
 			children = (
-				87148F3F2CA70C230061FCA1 /* InstagramCloneSwiftUI */,
+				87BCD90A2CB17780001ED05F /* InstagramCloneSwiftUI */,
 				87148F012CA709E40061FCA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +68,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				87BCD90A2CB17780001ED05F /* InstagramCloneSwiftUI */,
 			);
 			name = InstagramCloneSwiftUI;
 			packageProductDependencies = (
