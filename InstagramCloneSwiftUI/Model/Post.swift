@@ -24,7 +24,7 @@ extension Post {
             ownerUid: UUID().uuidString,
             caption: "Dattebayo!",
             likes: 104,
-            imageUrl: "naruto",
+            imageUrl: "naruto3",
             timeStamp: Date(),
             user: User.MOCK_USERS[0]
         ),
