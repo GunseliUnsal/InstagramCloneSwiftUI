@@ -52,13 +52,16 @@ struct ProfileHeaderView: View {
             Button {
                 
             } label: {
-                Text("Edit Profile")
-                    .foregroundStyle(.black)
+                Text(user.isCurrentUser ? "Edit Profile" : "Follow")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, minHeight: 32, alignment: .center)
+                    .background(user.isCurrentUser ? Color.white : Color.blue)
+                    .foregroundStyle(user.isCurrentUser ? .black : Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
                     .overlay(RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color.gray, lineWidth: 1))
+                        .stroke(user.isCurrentUser ? .gray : .clear, lineWidth: 1))
+                    
             }
             .padding(.horizontal)
             
