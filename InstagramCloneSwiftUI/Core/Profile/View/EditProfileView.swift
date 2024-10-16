@@ -35,7 +35,10 @@ struct EditProfileView: View {
                     Spacer()
                     
                     Button("Done") {
-                        Task { try await viewModel.updateUserData() }
+                        Task {
+                            try await viewModel.updateUserData()
+                            dismiss()
+                        }
                     }
                     .font(.subheadline)
                     .fontWeight(.bold)
@@ -57,12 +60,7 @@ struct EditProfileView: View {
                                 .clipShape(Circle())
                                 .frame(width: 80, height: 80)
                         } else {
-                            Image(systemName: "person")
-                                .resizable()
-                                .foregroundStyle(.white)
-                                .background(.gray)
-                                .clipShape(Circle())
-                                .frame(width: 80, height: 80)
+                            CircularProfileImageView(user: viewModel.user, size: .large)
                         }
                         
                         Text("Select Profile Picture")
