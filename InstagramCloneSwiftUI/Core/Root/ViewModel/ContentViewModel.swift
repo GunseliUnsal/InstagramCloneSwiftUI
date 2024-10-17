@@ -9,6 +9,7 @@ import Foundation
 import FirebaseAuth
 import Combine
 
+@MainActor
 class ContentViewModel: ObservableObject {
     
     private let service = AuthService.shared
@@ -20,6 +21,7 @@ class ContentViewModel: ObservableObject {
     init() {
         setupSubscribers()
     }
+    
     
     func setupSubscribers() {
         service.$userSession.sink { [weak self] userSession in
